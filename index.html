@@ -39,9 +39,50 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
+                    <p>Seorang mahasiswa Teknik Informatika yang bersemangat mengejar karir sebagai Cyber Security.
+                    Memiliki pemahaman mendalam tentang Bahasa Pemrograman seperti SQL, C++, Java, Python,
+                    HTML, CSS, dan Javascript. Mahir menggunakan Microsoft Excel dan Word Serta memiliki Basic
+                    Pengetahuan Networking dan 3D Modeling</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Networking</span><br>ambababa</li>
+                            <li><span>FrontEnd</span><br>ambababa</li>
+                            <li><span>BackEnd</span><br>ambababa</li>
+                            <li><span>App Development</span><br>ambababa</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2009 - 2015</span><br>SDN 1 CIGARUKGAK</li>
+                            <li><span>2015 - 2018</span><br>SMP Negeri 2 Ciawigebang</li>
+                            <li><span>2018 - 2021</span><br>SMK Model Patriot IV Ciawigebang</li>
+                            <li><span>2021 - Current</span><br>Universitas Tarumanagara</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
