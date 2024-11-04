@@ -15,12 +15,14 @@
         <div class="container">
             <nav>
                 <a href="#">Portfolio</a>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Web Developer</p>
@@ -69,6 +71,90 @@
         </div>
     </div>
 
+<!-----------project---------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Project</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/FotoProfileN.png">
+                    <div class="layer">
+                        <h3>Wizdrawl</h3>
+                        <p>Aplikasi yang didesain untuk menjadi platform yang dapat mengirim dan menerima uang</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/FotoProfileN.png">
+                    <div class="layer">
+                        <h3>Canon</h3>
+                        <p>Aplikasi yang didesain untuk menjadi platform yang dapat mengirim dan menerima uang</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/FotoProfileN.png">
+                    <div class="layer">
+                        <h3>Peduli sehat</h3>
+                        <p>Aplikasi yang didesain untuk menjadi platform yang dapat mengirim dan menerima uang</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/FotoProfileN.png">
+                    <div class="layer">
+                        <h3>Hartono Medika</h3>
+                        <p>Aplikasi yang didesain untuk menjadi platform yang dapat mengirim dan menerima uang</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/FotoProfileN.png">
+                    <div class="layer">
+                        <h3>Ancol</h3>
+                        <p>Aplikasi yang didesain untuk menjadi platform yang dapat mengirim dan menerima uang</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/FotoProfileN.png">
+                    <div class="layer">
+                        <h3>Komik planet</h3>
+                        <p>Aplikasi yang didesain untuk menjadi platform yang dapat mengirim dan menerima uang</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----------contact---------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>adangirawan05@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+62 822 1405 8989</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <a href="" class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>@Copyright</p>
+        </div>
+    </div>
+
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -82,6 +168,17 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
         }
     </script>
 </body>
